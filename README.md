@@ -15,7 +15,6 @@
     color: #d7fff4;
 	text: align-center;
   }
-
   #register-form {
 	background-color: #464646;
 	align-items: center;
@@ -25,7 +24,6 @@
     text-align: center;
 	display: inline-block;
   }
-
   #login-form {
     background-color: #464646;
     padding: 2rem;
@@ -35,12 +33,10 @@
 	display: none;
 	align-items: center;
   }
-
   h1 {
     margin-bottom: 1rem;
     letter-spacing: 2px;
   }
-
   input {
     width: 100%;
     padding: 10px;
@@ -50,7 +46,6 @@
     background: #0e4b47;
     color: #d7fff4;
   }
-
   button {
     width: 100%;
     padding: 10px;
@@ -59,11 +54,9 @@
     color: #003330;
     font: bold;
   }
-
   button:hover {
     background: #8ffff0;
   }
-
   .msg {
     font-size: 0.85rem;
     color: #ffbdbd;
@@ -75,7 +68,6 @@
 </style>
 </head>
 <body>
-
 <form id="register-form">
   <h1>BotW Guide Register</h1>
   <input id="user-register" placeholder="Traveler Name">
@@ -84,7 +76,6 @@
   <div class="msg-register" id="msg-register"></div>
   <button onclick="ermLogin()"> Login Here </button>
 </form>
-
 <form id="login-form">
   <h1>BotW Guide Login</h1>
   <input id="user-login" placeholder="Traveler Name" required>
@@ -92,7 +83,6 @@
   <button type="submit" >Enter Hyrule</button>
   <div class="msg-login" id="msg-login"></div>
 </form>
-
 <div id="menu" class="menu"> 
 	<h1> Welcome to Hyrule! </h1>
 	<h4> Please pick which topic you wish to learn about! </h4>
@@ -103,7 +93,6 @@
 		<li> <button type="submit"> Thing4 </button> </li>
 		<li> <button type="submit"> Thing5 </button> </li>
 	</ul>
-
 <script>
 	function ermLogin() {
 		document.querySelector("#register-form").style.display = "none";
@@ -123,14 +112,12 @@
 	function login(){
 		const ul = document.querySelector("#user-login").value;
 		const pl = document.querySelector("#pass-login").value;
-		
 		if (checkPassword(ul,pl)) {
 		document.querySelector("#login-form").style.display = "none";
 		document.querySelector("#menu").style.display = "inline-block";
 		} else {
 		showMsgLogin("Sheikah Slate denied. Please enter the correct password.");
 		}
-		
 	}
 	function register() {
 		localStorage.setItem("username", document.querySelector("#user-register").value);
@@ -149,8 +136,6 @@
 		event.preventDefault(); // Prevents the page from reloading
 		register();
 	});
-
 </script>
-
 </body>
 </html>
